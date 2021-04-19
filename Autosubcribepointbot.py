@@ -3,6 +3,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 # Enter ytmonster username and password to the end part
+ytmonster_username = ' enter here'
+ytmonster_password = 'enter here'
 gmail = ' enter your mail'
 gmail_password = 'enter your password'
 
@@ -79,6 +81,6 @@ class subscribebot:
 
 
 if __name__ == '__main__':
-    yout = subscribebot("Enter ytmonster Username", "Enter your password")
+    yout = subscribebot(ytmonster_username, ytmonster_password)
     yout.login()
     yout.subscribe()
