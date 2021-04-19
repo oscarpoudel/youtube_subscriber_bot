@@ -2,7 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 
-# Enter your username and password to the end part
+# Enter ytmonster username and password to the end part
+gmail = ' enter your mail'
+gmail_password = 'enter your password'
 
 
 class subscribebot:
@@ -36,7 +38,7 @@ class subscribebot:
             '//*[@id="buttons"]/ytd-button-renderer/a').click()
         time.sleep(5)
         emailid = bot.find_element_by_xpath('//*[@id="identifierId"]')
-        emailid.send_keys("bbaarraall111")
+        emailid.send_keys(gmail)
 
         next = bot.find_element_by_xpath(
             '//*[@id="identifierNext"]/div/button/div[2]').click()
@@ -44,7 +46,7 @@ class subscribebot:
 
         passw = bot.find_element_by_xpath(
             '//*[@id="password"]/div[1]/div/div[1]/input')
-        passw.send_keys("oossccaarR")
+        passw.send_keys(gmail_password)
         next2 = bot.find_element_by_xpath(
             '//*[@id="passwordNext"]/div/button/div[2]').click()
         time.sleep(15)
@@ -77,6 +79,6 @@ class subscribebot:
 
 
 if __name__ == '__main__':
-    yout = subscribebot("Enter Your Username", "Enter your password")
+    yout = subscribebot("Enter ytmonster Username", "Enter your password")
     yout.login()
     yout.subscribe()
